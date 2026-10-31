@@ -1,0 +1,21 @@
+[package]
+name = "hymeko_mesh"
+version = "0.1.0"
+edition = "2024"
+description = "Triangle meshes and surface materials: validation, topology, normals, fairing, subdivision, solids, spline surfaces and levels of detail. No IR."
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+serde = { version = "1", features = ["derive", "rc"] }
+# The shared material library decodes its JSON collection at run time.
+serde_json = "1"
+meshopt = { version = "=0.6.2", optional = true }
+
+[features]
+default = []
+# Deterministic index-only levels of detail through meshoptimizer (C++, built by `cc`).
+mesh-optimization = ["dep:meshopt"]
+
+[dev-dependencies]
+# Optional offline PNG export example; never enters the library's runtime graph.
+image = { version = "0.25", default-features = false, features = ["png"] }
