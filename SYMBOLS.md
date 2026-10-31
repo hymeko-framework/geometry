@@ -13,7 +13,7 @@ Extracted by grammar -- tree-sitter for Rust and C++, `ast` for Python -- so tha
 `pub(crate)`, a `pub fn` inside a private `mod`, and a `def` written inside a
 docstring are all excluded for a stated reason rather than by luck.
 
-**1 package(s), 76 public symbol(s).**
+**1 package(s), 96 public symbol(s).**
 
 ## hymeko_mesh (rust)
 
@@ -29,6 +29,7 @@ docstring are all excluded for a stated reason rather than by luck.
 - `FaceOrigin` — `hymeko_mesh/src/mesh/solid.rs`
 - `FairOptions` — `hymeko_mesh/src/mesh/fair.rs`
 - `FairReport` — `hymeko_mesh/src/mesh/fair.rs`
+- `Line` — `hymeko_mesh/src/ray.rs`
 - `MaterialLibrary` — `hymeko_mesh/src/material/library.rs`
 - `MeshLod` — `hymeko_mesh/src/mesh.rs`
 - `NormalSmoothing` — `hymeko_mesh/src/mesh/normals.rs`
@@ -41,6 +42,7 @@ docstring are all excluded for a stated reason rather than by luck.
 - `ReliefProfile` — `hymeko_mesh/src/material.rs`
 - `RgbaImage` — `hymeko_mesh/src/material.rs`
 - `SkinProfile` — `hymeko_mesh/src/material.rs`
+- `Span` — `hymeko_mesh/src/ray.rs`
 - `SplineSurface` — `hymeko_mesh/src/mesh/spline.rs`
 - `SubdivisionSurface` — `hymeko_mesh/src/mesh/subdivision.rs`
 - `SurfaceFairing` — `hymeko_mesh/src/mesh/fair.rs`
@@ -58,21 +60,31 @@ docstring are all excluded for a stated reason rather than by luck.
 ### enums
 
 - `BoundaryMode` — `hymeko_mesh/src/mesh/fair.rs`
+- `Enclosure` — `hymeko_mesh/src/mesh/closure.rs`
 - `FairNormals` — `hymeko_mesh/src/mesh/fair.rs`
 - `FairStep` — `hymeko_mesh/src/mesh/fair.rs`
 - `SurfacePattern` — `hymeko_mesh/src/material/procedural.rs`
 - `TextureWrap` — `hymeko_mesh/src/material.rs`
+- `Unit` — `hymeko_mesh/src/ray.rs`
 
 ### functions
 
+- `and` — `hymeko_mesh/src/ray.rs`
 - `apply` — `hymeko_mesh/src/mesh/fair.rs`
 - `apply` — `hymeko_mesh/src/mesh/normals.rs`
 - `apply_weighted` — `hymeko_mesh/src/mesh/fair.rs`
+- `at` — `hymeko_mesh/src/ray.rs`
 - `bake` — `hymeko_mesh/src/material/library.rs`
 - `bake` — `hymeko_mesh/src/material/procedural.rs`
+- `ball` — `hymeko_mesh/src/ray.rs`
 - `bounds` — `hymeko_mesh/src/mesh.rs`
 - `bounds` — `hymeko_mesh/src/mesh/spline.rs`
 - `builtin` — `hymeko_mesh/src/material/library.rs`
+- `capsule` — `hymeko_mesh/src/ray.rs`
+- `cube` — `hymeko_mesh/src/mesh/primitive.rs`
+- `cylinder` — `hymeko_mesh/src/mesh/primitive.rs`
+- `entry` — `hymeko_mesh/src/ray.rs`
+- `first_crossing` — `hymeko_mesh/src/ray.rs`
 - `fit_targets` — `hymeko_mesh/src/mesh/fair.rs`
 - `follow_geometry` — `hymeko_mesh/src/mesh/normals.rs`
 - `for_processing` — `hymeko_mesh/src/mesh/topology.rs`
@@ -81,6 +93,7 @@ docstring are all excluded for a stated reason rather than by luck.
 - `hints` — `hymeko_mesh/src/mesh/topology.rs`
 - `indices` — `hymeko_mesh/src/mesh/bridge.rs`
 - `indices` — `hymeko_mesh/src/mesh/spline.rs`
+- `into_frame` — `hymeko_mesh/src/ray.rs`
 - `limit_positions` — `hymeko_mesh/src/mesh/subdivision.rs`
 - `limit_positions_with_fixed_boundary` — `hymeko_mesh/src/mesh/subdivision.rs`
 - `mesh` — `hymeko_mesh/src/mesh/spline.rs`
@@ -88,16 +101,23 @@ docstring are all excluded for a stated reason rather than by luck.
 - `new` — `hymeko_mesh/src/mesh/regularize.rs`
 - `new` — `hymeko_mesh/src/mesh/subdivision.rs`
 - `new` — `hymeko_mesh/src/mesh/topology.rs`
+- `new` — `hymeko_mesh/src/ray.rs`
 - `ocular_atlas` — `hymeko_mesh/src/material.rs`
+- `of` — `hymeko_mesh/src/mesh/closure.rs`
 - `optimize` — `hymeko_mesh/src/mesh.rs`
+- `or` — `hymeko_mesh/src/ray.rs`
 - `polygons` — `hymeko_mesh/src/mesh/pairing.rs`
 - `prepare` — `hymeko_mesh/src/mesh/regularize.rs`
 - `project` — `hymeko_mesh/src/mesh/topology.rs`
+- `quad` — `hymeko_mesh/src/mesh/primitive.rs`
 - `render_mesh` — `hymeko_mesh/src/mesh/spline.rs`
 - `sample` — `hymeko_mesh/src/material/procedural.rs`
 - `sample` — `hymeko_mesh/src/mesh/spline.rs`
 - `textures` — `hymeko_mesh/src/material/procedural.rs`
+- `unique_edges` — `hymeko_mesh/src/mesh/closure.rs`
+- `unit` — `hymeko_mesh/src/ray.rs`
 - `uv` — `hymeko_mesh/src/mesh/topology.rs`
+- `uv_sphere` — `hymeko_mesh/src/mesh/primitive.rs`
 - `validate` — `hymeko_mesh/src/material.rs`
 - `validate` — `hymeko_mesh/src/material/library.rs`
 - `validate` — `hymeko_mesh/src/material/procedural.rs`
