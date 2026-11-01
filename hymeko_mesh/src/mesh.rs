@@ -15,6 +15,10 @@ pub mod subdivision;
 pub mod spline;
 /// Bounded, transverse union of a closed surface with a convex addition.
 pub mod solid;
+/// How a triangle list bounds space, and its wireframe edges, for any list.
+pub mod closure;
+/// Unit cube, quad, UV sphere and cylinder.
+pub mod primitive;
 mod topology;
 mod pairing;
 

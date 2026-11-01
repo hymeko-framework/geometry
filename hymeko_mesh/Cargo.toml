@@ -19,3 +19,5 @@ mesh-optimization = ["dep:meshopt"]
 [dev-dependencies]
 # Optional offline PNG export example; never enters the library's runtime graph.
 image = { version = "0.25", default-features = false, features = ["png"] }
+# Placements and rotations in the ray tests only; the library's API stays in plain arrays.
+glam = "0.31"

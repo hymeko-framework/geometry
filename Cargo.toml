@@ -1,3 +1,3 @@
 [workspace]
-members = ["hymeko_mesh"]
+members = ["hymeko_mesh", "hymeko_kinematics"]
 resolver = "3"

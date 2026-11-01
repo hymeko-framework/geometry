@@ -6,6 +6,9 @@
 //!   checks, seam-aware normals, fairing, constrained quad regularisation, Catmull–Clark
 //!   subdivision, solid union, spline control surfaces, and, with `mesh-optimization`,
 //!   meshoptimizer levels of detail.
+//!   The [`mesh::closure`] query classifies any triangle list as closed or names its defect, and
+//!   [`mesh::primitive`] builds the unit cube, quad, UV sphere and cylinder.
+//! - [`ray`] — where a line meets a unit solid under an affine map, a capsule, or a triangle list.
 //! - [`material`] — glTF metallic-roughness materials, radiance images and the shared procedural
 //!   material library.
 //!
@@ -18,3 +21,5 @@
 
 pub mod material;
 pub mod mesh;
+pub mod ray;
+pub mod recipe;
