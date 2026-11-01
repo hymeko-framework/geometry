@@ -1,0 +1,23 @@
+[package]
+name = "hymeko_kinematics"
+version = "0.1.0"
+edition = "2024"
+description = "Kinematic models and their computations without IR: forward/inverse kinematics, DH chains, joint playout, two-bone limbs, collision geometry."
+license = "MIT OR Apache-2.0"
+
+# The same published revisions transformation's hymeko_geometry pins, so a consumer of both
+# resolves one crate identity per dependency.
+[dependencies]
+# SE(n) rigid motions: the Tensor pillar's geometric algebra.
+hymeko_clifford = { git = "ssh://git@192.168.1.228:2222/hymeko/tensor.git", rev = "9317ecf773d55a0e7968273a63bc2f4e8dbcc7c7", optional = true }
+# Dense f64 kernels (damped least squares) for inverse kinematics.
+hymeko_tensor = { git = "ssh://git@192.168.1.228:2222/hymeko/tensor.git", rev = "d9a8a79f7152fdede8791c0bea5918eba0c3fab9", optional = true }
+# Hermite joint playout.
+hymeko_spline = { git = "ssh://git@192.168.1.228:2222/hymeko/tensor.git", rev = "514f7e8385a3bf7665494b94c2ae5acc4d5114a0", optional = true }
+# Spatial candidate search belongs to Graph SBSH; no second partition here.
+hymeko_sbsh = { git = "ssh://git@192.168.1.228:2222/hymeko/graph.git", rev = "ea1c588697dd07412bc008a4a41813db8969a83e", optional = true }
+
+[features]
+default = ["model"]
+# The kinematic model and everything built on it; two_bone needs none of it.
+model = ["dep:hymeko_clifford", "dep:hymeko_tensor", "dep:hymeko_spline", "dep:hymeko_sbsh"]
