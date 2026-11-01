@@ -22,3 +22,4 @@
 pub mod material;
 pub mod mesh;
 pub mod ray;
+pub mod recipe;
