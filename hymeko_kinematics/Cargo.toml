@@ -3,7 +3,7 @@ name = "hymeko_kinematics"
 version = "0.1.0"
 edition = "2024"
 description = "Kinematic models and their computations without IR: forward/inverse kinematics, DH chains, joint playout, two-bone limbs, collision geometry."
-license = "MIT OR Apache-2.0"
+license = "MIT"
 
 # The same published revisions transformation's hymeko_geometry pins, so a consumer of both
 # resolves one crate identity per dependency.
