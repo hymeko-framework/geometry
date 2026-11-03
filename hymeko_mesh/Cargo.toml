@@ -3,7 +3,7 @@ name = "hymeko_mesh"
 version = "0.1.0"
 edition = "2024"
 description = "Triangle meshes and surface materials: validation, topology, normals, fairing, subdivision, solids, spline surfaces and levels of detail. No IR."
-license = "MIT OR Apache-2.0"
+license = "MIT"
 
 [dependencies]
 serde = { version = "1", features = ["derive", "rc"] }
