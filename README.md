@@ -47,9 +47,9 @@ aliases, so its consumers see no parameter.
 ## Checks
 
 ```
-cargo test --offline -j 2
-cargo test --offline -j 2 --features hymeko_mesh/mesh-optimization
-cargo check --offline -j 2 -p hymeko_kinematics --no-default-features
+cargo test --locked -j 2
+cargo test --locked -j 2 --features hymeko_mesh/mesh-optimization
+cargo check --locked -j 2 -p hymeko_kinematics --no-default-features
 ```
 
 ## Provenance

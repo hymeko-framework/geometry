@@ -58,7 +58,7 @@ Output maps have repeat wrapping and mipmaps. Work runs once at load or offline,
 not each frame; the existing renderer owns upload/caching/filtering.
 
 Offline PNG + height export, from the geometry repository root:
-  cargo run --locked --offline -p hymeko_mesh --example material_bake -- OUTPUT_DIRECTORY 512
+  cargo run --locked -p hymeko_mesh --example material_bake -- OUTPUT_DIRECTORY 512
 Height files: row-major .f32le metres, no display normalization. Export metadata
 contains the exact library and conventions. The crate itself has no image codec
 runtime dependency: image is used only by the exporter example.
@@ -72,6 +72,6 @@ inputs fail before allocation. Results are deterministic on the same numeric
 implementation; cross-platform trigonometric byte identity is not promised.
 
 Focused checks
-  cargo test --locked --offline -p hymeko_mesh --test material_library
-  cargo test --locked --offline -p hymeko_mesh --lib material::
+  cargo test --locked -p hymeko_mesh --test material_library
+  cargo test --locked -p hymeko_mesh --lib material::
 
